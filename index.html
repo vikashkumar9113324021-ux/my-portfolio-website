@@ -1,0 +1,2701 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Vikash Kumar - BCA Student Portfolio">
+
+    <title>Vikash Kumar | Portfolio</title>
+
+
+    <style>
+
+        /* =====================================================
+           DARK PORTFOLIO - CSS
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --bg: #050b14;
+            --bg2: #081321;
+            --card: #0b1726;
+            --blue: #168cff;
+            --blue-light: #70baff;
+            --white: #ffffff;
+            --text: #d9e7f5;
+            --muted: #9aafc3;
+            --border: #173451;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section {
+            padding: 90px 0;
+            border-top: 1px solid #11263b;
+        }
+
+        .blue {
+            color: var(--blue);
+        }
+
+        .placeholder {
+            color: #ffc857;
+            font-weight: bold;
+        }
+
+        .db {
+            color: #62b5ff;
+            font-weight: bold;
+        }
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(5, 11, 20, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav {
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: var(--blue);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            color: var(--text);
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--blue);
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 28px;
+            color: var(--blue);
+            cursor: pointer;
+        }
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            min-height: 100vh;
+            padding-top: 120px;
+            display: flex;
+            align-items: center;
+
+            background:
+                radial-gradient(
+                    circle at 80% 30%,
+                    #073567 0%,
+                    transparent 30%
+                ),
+                var(--bg);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .hero h4 {
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 {
+            font-size: 62px;
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: var(--blue);
+        }
+
+        .hero h3 {
+            color: #9bc9ef;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: var(--muted);
+            max-width: 650px;
+            margin-bottom: 25px;
+        }
+
+        /* =====================================================
+           PHOTO
+        ===================================================== */
+
+        .hero-photo {
+            display: flex;
+            justify-content: center;
+        }
+
+        .photo-frame {
+            width: 390px;
+            height: 490px;
+            border: 4px solid var(--blue);
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow:
+                0 0 50px rgba(22, 140, 255, 0.25);
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        /* =====================================================
+           BUTTONS
+        ===================================================== */
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 11px 22px;
+            border: 1px solid var(--blue);
+            border-radius: 7px;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--blue);
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(22, 140, 255, 0.25);
+        }
+
+        /* =====================================================
+           SOCIAL
+        ===================================================== */
+
+        .socials {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .socials a {
+            border: 1px solid #1a4269;
+            padding: 7px 14px;
+            border-radius: 25px;
+            color: #8fc9ff;
+        }
+
+        .socials a:hover {
+            background: var(--blue);
+            color: white;
+        }
+
+        /* =====================================================
+           TITLES
+        ===================================================== */
+
+        .section-title {
+            text-align: center;
+            font-size: 38px;
+            margin-bottom: 50px;
+        }
+
+        .section-title span {
+            color: var(--blue);
+        }
+
+        /* =====================================================
+           CARDS
+        ===================================================== */
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 30px;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--blue);
+            box-shadow: 0 15px 40px rgba(22, 140, 255, 0.12);
+        }
+
+        .card h3 {
+            color: var(--blue);
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: var(--muted);
+        }
+
+        /* =====================================================
+           ABOUT
+        ===================================================== */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            padding: 11px 0;
+            border-bottom: 1px solid #162b40;
+            color: var(--muted);
+        }
+
+        .info-list strong {
+            display: inline-block;
+            width: 115px;
+            color: white;
+        }
+
+        /* =====================================================
+           EDUCATION
+        ===================================================== */
+
+        .timeline {
+            max-width: 900px;
+            margin: auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--blue);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 35px;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: 13px;
+            top: 7px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--blue);
+            box-shadow: 0 0 15px var(--blue);
+        }
+
+        /* =====================================================
+           SKILLS
+        ===================================================== */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            padding: 8px 14px;
+            background: #0e243d;
+            border: 1px solid #1a4269;
+            border-radius: 30px;
+            color: #cfe6ff;
+        }
+
+        /* =====================================================
+           PROJECTS
+        ===================================================== */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .project {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            padding: 25px;
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-7px);
+            border-color: var(--blue);
+        }
+
+        .project-icon {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .project h3 {
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: var(--muted);
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-top: 15px;
+        }
+
+        .tag {
+            padding: 5px 10px;
+            background: #0d2945;
+            color: var(--blue-light);
+            border-radius: 20px;
+            font-size: 12px;
+        }
+
+        /* =====================================================
+           CERTIFICATES
+        ===================================================== */
+
+        .certificates {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .certificate {
+            display: flex;
+            gap: 18px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        .certificate-icon {
+            min-width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #0d2945;
+            border-radius: 10px;
+            font-size: 28px;
+        }
+
+        .certificate h3 {
+            margin-bottom: 7px;
+        }
+
+        .certificate p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* =====================================================
+           HOBBIES
+        ===================================================== */
+
+        .hobbies {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 15px;
+        }
+
+        .hobby {
+            text-align: center;
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 25px 10px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .hobby:hover {
+            transform: translateY(-5px);
+            border-color: var(--blue);
+        }
+
+        .hobby-icon {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .hobby p {
+            color: var(--muted);
+        }
+
+        /* =====================================================
+           CONTACT
+        ===================================================== */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .contact-icon {
+            font-size: 23px;
+            color: var(--blue);
+        }
+
+        .contact-item p {
+            color: var(--muted);
+            overflow-wrap: anywhere;
+        }
+
+        /* =====================================================
+           FORM
+        ===================================================== */
+
+        form {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .input-group {
+            margin-bottom: 18px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 7px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 13px;
+            background: #050b14;
+            border: 1px solid var(--border);
+            border-radius: 7px;
+            color: white;
+            outline: none;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: var(--blue);
+        }
+
+        textarea {
+            height: 130px;
+            resize: vertical;
+        }
+
+        /* =====================================================
+           DATABASE
+        ===================================================== */
+
+        .database-box {
+            background: #07111e;
+            border: 1px solid #1a4269;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .database-box code {
+            display: block;
+            background: #03070d;
+            color: #70baff;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            line-height: 1.8;
+        }
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            padding: 30px;
+            text-align: center;
+            color: #8196aa;
+            border-top: 1px solid var(--border);
+        }
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media(max-width: 950px) {
+
+            .hero-grid,
+            .about-grid,
+            .skills-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                text-align: center;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .buttons,
+            .socials {
+                justify-content: center;
+            }
+
+            .hero-photo {
+                order: -1;
+            }
+
+            .projects {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hobbies {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media(max-width: 650px) {
+
+            .nav-links {
+                position: absolute;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                background: #07111e;
+                flex-direction: column;
+                text-align: center;
+                padding: 25px;
+                transition: 0.3s;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .projects,
+            .certificates {
+                grid-template-columns: 1fr;
+            }
+
+            .hobbies {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero h1 {
+                font-size: 43px;
+            }
+
+            .photo-frame {
+                width: 300px;
+                height: 380px;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header>
+
+    <div class="container">
+
+        <nav>
+
+            <a href="#home" class="logo">
+                Vikash<span>.</span>
+            </a>
+
+
+            <ul class="nav-links" id="navLinks">
+
+                <li><a href="#home">Home</a></li>
+
+                <li><a href="#about">About</a></li>
+
+                <li><a href="#education">Education</a></li>
+
+                <li><a href="#skills">Skills</a></li>
+
+                <li><a href="#projects">Projects</a></li>
+
+                <li><a href="#certificates">Certificates</a></li>
+
+                <li><a href="#hobbies">Hobbies</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+
+            <div class="menu-btn"
+                 onclick="toggleMenu()">
+
+                ☰
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HOME
+===================================================== -->
+
+<section class="hero" id="home">
+
+    <div class="container">
+
+        <div class="hero-grid">
+
+
+            <div class="hero-text">
+
+                <h4>
+                    👋 Hello, I'm
+                </h4>
+
+
+                <!-- =================================================
+                     ✏️ CHANGE HERE: YOUR NAME
+                ================================================== -->
+
+                <h1>
+
+                    Vikash
+                    <span>Kumar</span>
+
+                </h1>
+
+
+                <!-- [DB: profile.name] -->
+
+
+                <!-- =================================================
+                     ✏️ CHANGE HERE: YOUR PROFESSIONAL TITLE
+                ================================================== -->
+
+                <h3>
+
+                    BCA Student |
+                    Web Developer |
+                    Programmer
+
+                </h3>
+
+
+                <!-- [DB: profile.role] -->
+
+
+                <!-- =================================================
+                     ✏️ CHANGE HERE: YOUR SHORT INTRODUCTION
+                ================================================== -->
+
+                <p>
+
+                    I am a Computer Applications student
+                    interested in web development, programming,
+                    backend development, APIs and modern
+                    technologies.
+
+                    I enjoy learning through practical projects
+                    and continuously improving my technical skills.
+
+                </p>
+
+
+                <!-- [DB: profile.about] -->
+
+
+                <div class="buttons">
+
+
+                    <a href="#contact"
+                       class="btn btn-primary">
+
+                        Contact Me
+
+                    </a>
+
+
+                    <!-- =================================================
+                         ✏️ CHANGE HERE: YOUR RESUME FILE
+                         Put resume.pdf in the same folder.
+                    ================================================== -->
+
+                    <a href="resume.pdf"
+                       class="btn"
+                       download>
+
+                        Download Resume
+
+                    </a>
+
+
+                </div>
+
+
+                <div class="socials">
+
+
+                    <!-- =================================================
+                         ✏️ CHANGE HERE: LINKEDIN
+                    ================================================== -->
+
+                    <a href="https://www.linkedin.com/in/vikash-kumar-30bb4b437"
+                       target="_blank">
+
+                        LinkedIn
+
+                    </a>
+
+
+                    <!-- =================================================
+                         ✏️ CHANGE HERE: GITHUB
+                    ================================================== -->
+
+                    <a href="https://github.com/vikashkumar9113324021-ux"
+                       target="_blank">
+
+                        GitHub
+
+                    </a>
+
+
+                    <!-- =================================================
+                         ✏️ CHANGE HERE: EMAIL
+                    ================================================== -->
+
+                    <a href="mailto:vikashkumar9113324021@gmail.com">
+
+                        Email
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PROFILE PHOTO
+            ================================================== -->
+
+            <div class="hero-photo">
+
+                <div class="photo-frame">
+
+
+                    <!-- =================================================
+                         ✏️ CHANGE HERE: YOUR PHOTO
+
+                         Rename your photo to profile.jpg
+                         and put it beside index.html.
+                    ================================================== -->
+
+                    <img src="profile.jpg"
+                         alt="Vikash Kumar">
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT ME
+===================================================== -->
+
+<section id="about">
+
+    <div class="container">
+
+
+        <h2 class="section-title">
+
+            About
+            <span>Me</span>
+
+        </h2>
+
+
+        <div class="about-grid">
+
+
+            <div class="card">
+
+
+                <h3>
+                    Who I Am
+                </h3>
+
+
+                <!-- =================================================
+                     ✏️ CHANGE HERE: ABOUT YOU
+                ================================================== -->
+
+                <p>
+
+                    Hello! My name is
+                    <strong>Vikash Kumar</strong>.
+
+                    I am a Computer Applications student
+                    interested in software development,
+                    web development and programming.
+
+                </p>
+
+
+                <br>
+
+
+                <!-- =================================================
+                     ✏️ CHANGE HERE: YOUR SECOND ABOUT PARAGRAPH
+                ================================================== -->
+
+                <p>
+
+                    I enjoy exploring new technologies,
+                    creating practical projects and learning
+                    new programming concepts.
+
+                </p>
+
+
+                <br>
+
+
+                <!-- =================================================
+                     ✏️ CHANGE HERE: YOUR CAREER GOAL
+                ================================================== -->
+
+                <p>
+
+                    My goal is to become a skilled developer
+                    and build useful technology solutions.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="card">
+
+
+                <h3>
+                    Personal Information
+                </h3>
+
+
+                <ul class="info-list">
+
+
+                    <li>
+
+                        <strong>Name:</strong>
+
+                        <!-- ✏️ CHANGE HERE -->
+
+                        Vikash Kumar
+
+                        <!-- [DB: profile.name] -->
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>Course:</strong>
+
+                        <!-- ✏️ CHANGE HERE -->
+
+                        Bachelor of Computer Applications
+
+                        <!-- [DB: profile.course] -->
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>Location:</strong>
+
+                        <!-- ✏️ CHANGE HERE -->
+
+                        <span class="placeholder">
+                            [Sheohar / Bihar]
+                        </span>
+
+                        <!-- [DB: profile.location] -->
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>Email:</strong>
+
+                        <!-- ✏️ CHANGE HERE -->
+
+                        vikashkumar9113324021@gmail.com
+
+                        <!-- [DB: profile.email] -->
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>Mobile:</strong>
+
+                        <!-- ✏️ CHANGE HERE -->
+
+                        9113324021
+
+                        <!-- [DB: profile.mobile] -->
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>Languages:</strong>
+
+                        <!-- ✏️ CHANGE HERE -->
+
+                        Hindi, English
+
+                        <!-- [DB: profile.languages] -->
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EDUCATION
+===================================================== -->
+
+<section id="education">
+
+    <div class="container">
+
+
+        <h2 class="section-title">
+
+            My
+            <span>Education</span>
+
+        </h2>
+
+
+        <div class="timeline">
+
+
+            <!-- =================================================
+                 BCA
+            ================================================== -->
+
+            <div class="timeline-item">
+
+                <div class="card">
+
+
+                    <h3>
+                        Bachelor of Computer Applications
+                        (BCA)
+                    </h3>
+
+
+                    <p>
+
+                        <strong>College:</strong>
+
+                        <!-- ✏️ CHANGE HERE: YOUR COLLEGE NAME -->
+
+                        <span class="placeholder">
+                            [ Mewar University]
+                        </span>
+
+                        <!-- [DB: education.college] -->
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>University:</strong>
+
+                        <!-- ✏️ CHANGE HERE -->
+
+                        <span class="placeholder">
+                            [ Mewar University]
+                        </span>
+
+                        <!-- [DB: education.university] -->
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>Year/Semester:</strong>
+
+                        <!-- ✏️ CHANGE HERE -->
+
+                        <span class="placeholder">
+                            [2nd YEAR / 3rd SEMESTER]
+                        </span>
+
+                        <!-- [DB: education.year] -->
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>Status:</strong>
+
+                        BCA 
+
+                    </p>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 12TH
+            ================================================== -->
+
+            <div class="timeline-item">
+
+                <div class="card">
+
+
+                    <h3>
+                        Higher Secondary
+                        (12th)
+                    </h3>
+
+
+                    <p>
+
+                        <strong>School:</strong>
+
+                        <!-- ✏️ CHANGE HERE: 12TH SCHOOL -->
+
+                        <span class="placeholder">
+                             Sri Nawab S.S School Sheohar
+                        </span>
+
+                        <!-- [DB: education.school12] -->
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>Board:</strong>
+
+                        <!-- ✏️ CHANGE HERE -->
+
+                        <span class="placeholder">
+                            [Bihar BOARD]
+                        </span>
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>Year:</strong>
+
+                        <!-- ✏️ CHANGE HERE -->
+
+                        <span class="placeholder">
+                            [2023-2025]
+                        </span>
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>Percentage:</strong>
+
+                        <!-- ✏️ CHANGE HERE -->
+
+                        <span class="placeholder">
+                            [65%]
+                        </span>
+
+                    </p>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 10TH
+            ================================================== -->
+
+            <div class="timeline-item">
+
+                <div class="card">
+
+
+                    <h3>
+                        Secondary
+                        (10th)
+                    </h3>
+
+
+                    <p>
+
+                        <strong>School:</strong>
+
+                        <!-- ✏️ CHANGE HERE: 10TH SCHOOL -->
+
+                        <span class="placeholder">
+                            [Uttkramit M S Khairbadurp, Sheohar]
+                        </span>
+
+                        <!-- [DB: education.school10] -->
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>Board:</strong>
+
+                        <!-- ✏️ CHANGE HERE -->
+
+                        <span class="placeholder">
+                            [Bihar BOARD]
+                        </span>
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>Year:</strong>
+
+                        <!-- ✏️ CHANGE HERE -->
+
+                        <span class="placeholder">
+                            [ 2022-2023]
+                        </span>
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>Percentage:</strong>
+
+                        <!-- ✏️ CHANGE HERE -->
+
+                        <span class="placeholder">
+                            [69.99%]
+                        </span>
+
+                    </p>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SKILLS
+===================================================== -->
+
+<section id="skills">
+
+    <div class="container">
+
+
+        <h2 class="section-title">
+
+            My
+            <span>Skills</span>
+
+        </h2>
+
+
+        <div class="skills-grid">
+
+
+            <div class="card">
+
+
+                <h3>
+                    Technical Skills
+                </h3>
+
+
+                <!-- =================================================
+                     ✏️ CHANGE HERE: ADD/REMOVE YOUR TECHNICAL SKILLS
+                ================================================== -->
+
+                <div class="skills">
+
+                    <span class="skill">HTML</span>
+
+                    <span class="skill">CSS</span>
+
+                    <span class="skill">JavaScript</span>
+
+                    <span class="skill">Java</span>
+
+                    <span class="skill">Python</span>
+
+                    <span class="skill">Node.js</span>
+
+                    <span class="skill">Express.js</span>
+
+                    <span class="skill">MongoDB</span>
+
+                    <span class="skill">MySQL</span>
+
+                    <span class="skill">Git</span>
+
+                    <span class="skill">GitHub</span>
+
+                    <span class="skill">REST API</span>
+
+                </div>
+
+
+                <!-- [DB: skills.technical[]] -->
+
+            </div>
+
+
+
+            <div class="card">
+
+
+                <h3>
+                    Soft Skills
+                </h3>
+                
+
+
+                <!-- =================================================
+                     ✏️ CHANGE HERE: ADD/REMOVE SOFT SKILLS
+                ================================================== -->
+
+                <div class="skills">
+
+                    <span class="skill">
+                        Communication
+                    </span>
+
+                    <span class="skill">
+                        Teamwork
+                    </span>
+
+                    <span class="skill">
+                        Problem Solving
+                    </span>
+
+                    <span class="skill">
+                        Time Management
+                    </span>
+
+                    <span class="skill">
+                        Quick Learning
+                    </span>
+
+                    <span class="skill">
+                        Creativity
+                    </span>
+
+                </div>
+
+
+                <!-- [DB: skills.soft[]] -->
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
+
+<section id="projects">
+
+    <div class="container">
+
+
+        <h2 class="section-title">
+
+            My
+            <span>Projects</span>
+
+        </h2>
+
+
+        <div class="projects">
+
+
+            <!-- =================================================
+                 PROJECT 1
+            ================================================== -->
+
+            <div class="project">
+
+
+                <div class="project-icon">
+                    💼
+                </div>
+
+
+                <!-- ✏️ CHANGE HERE: PROJECT NAME -->
+
+                <h3>
+                    Personal Portfolio Website
+                </h3>
+
+
+                <!-- ✏️ CHANGE HERE: PROJECT DESCRIPTION -->
+
+                <p>
+
+                    A responsive personal portfolio website
+                    containing my education, skills, projects,
+                    certificates and contact information.
+
+                </p>
+
+
+                <!-- ✏️ CHANGE HERE: TECHNOLOGIES -->
+
+                <div class="tags">
+
+                    <span class="tag">HTML</span>
+
+                    <span class="tag">CSS</span>
+
+                    <span class="tag">JavaScript</span>
+
+                </div>
+
+
+                <br>
+
+
+                <!-- ✏️ CHANGE HERE: PROJECT LINK -->
+
+                <a href="#"
+                   class="blue">
+
+                    View Project →
+
+                </a>
+
+
+                <!-- [DB: projects[0]] -->
+
+
+            </div>
+            
+
+
+
+            <!-- =================================================
+                 PROJECT 2
+            ================================================== -->
+
+            <div class="project">
+
+
+                <div class="project-icon">
+                    👨‍💻
+                </div>
+
+
+                <!-- ✏️ CHANGE HERE -->
+
+                <h3>
+                    Resumely Backend
+                </h3>
+
+
+                <!-- ✏️ CHANGE HERE -->
+
+                <p>
+
+                    A backend project using Node.js,
+                    Express.js and MongoDB for a resume
+                    application.
+
+                </p>
+
+
+                <div class="tags">
+
+                    <span class="tag">
+                        Node.js
+                    </span>
+
+                    <span class="tag">
+                        Express.js
+                    </span>
+
+                    <span class="tag">
+                        MongoDB
+                    </span>
+
+                    <span class="tag">
+                        REST API
+                    </span>
+
+                </div>
+
+
+                <br>
+
+
+                <!-- ✏️ CHANGE HERE: GITHUB/PROJECT LINK -->
+
+                <a href="#"
+                   class="blue">
+
+                    View Project →
+
+                </a>
+
+
+                <!-- [DB: projects[1]] -->
+
+
+            </div>
+
+             
+
+
+            <!-- =================================================
+                 PROJECT 3
+            ================================================== -->
+
+            <div class="project">
+
+
+                <div class="project-icon">
+                    🌦️
+                </div>
+
+
+                <!-- ✏️ CHANGE HERE -->
+
+                <h3>
+                    Weather Application
+                </h3>
+
+
+                <!-- ✏️ CHANGE HERE -->
+
+                <p>
+
+                    A weather application using JavaScript
+                    and a weather API to display weather
+                    information.
+
+                </p>
+
+
+                <div class="tags">
+
+                    <span class="tag">
+                        HTML
+                    </span>
+
+                    <span class="tag">
+                        CSS
+                    </span>
+
+                    <span class="tag">
+                        JavaScript
+                    </span>
+
+                    <span class="tag">
+                        API
+                    </span>
+
+                </div>
+
+
+                <!-- [DB: projects[2]] -->
+
+            </div>
+            
+
+
+
+            <!-- =================================================
+                 PROJECT 4
+            ================================================== -->
+
+            <div class="project">
+
+
+                <div class="project-icon">
+                    🎓
+                </div>
+
+
+                <!-- ✏️ CHANGE HERE -->
+
+                <h3>
+                    Student Management System
+                </h3>
+
+
+                <!-- ✏️ CHANGE HERE -->
+
+                <p>
+
+                    A project for managing student information,
+                    academic details and records.
+
+                </p>
+
+
+                <div class="tags">
+
+                    <span class="tag">
+                        Java
+                    </span>
+
+                    <span class="tag">
+                        MySQL
+                    </span>
+
+                    <span class="tag">
+                        Database
+                    </span>
+
+                </div>
+
+
+                <!-- [DB: projects[3]] -->
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CERTIFICATES
+===================================================== -->
+
+<section id="certificates">
+
+    <div class="container">
+
+
+        <h2 class="section-title">
+
+            My
+            <span>Certificates</span>
+
+        </h2>
+
+
+        <div class="certificates">
+
+
+            <!-- =================================================
+                 CERTIFICATE 1
+            ================================================== -->
+
+            <div class="certificate">
+
+
+                <div class="certificate-icon">
+                    🤖
+                </div>
+
+
+                <div>
+
+
+                    <h3>
+                        Artificial Intelligence
+                        Fundamentals
+                    </h3>
+
+
+                    <p>
+
+                        Issued by:
+                        <strong>
+                            IBM SkillsBuild
+                        </strong>
+
+                    </p>
+
+
+                    <p>
+
+                        Issued:
+                        September 26, 2026
+
+                    </p>
+
+
+                    <!-- =================================================
+                         ✏️ CHANGE HERE:
+                         Certificate PDF filename
+                    ================================================== -->
+
+                    <br>
+
+                    <a href="certificate-ai-fundamentals.pdf"
+                       target="_blank"
+                       class="btn">
+
+                        View Certificate
+
+                    </a>
+
+
+                    <!-- [DB: certificates[0]] -->
+
+
+                </div>
+
+            </div>
+            <br><br>
+
+
+
+            <!-- =================================================
+                 CERTIFICATE 2
+            ================================================== -->
+
+            <div class="certificate">
+
+
+                <div class="certificate-icon">
+                    🎯
+                </div>
+
+
+                <div>
+
+
+                    <h3>
+                        Career Management Essentials
+                    </h3>
+
+
+                    <p>
+
+                        Issued by:
+                        <strong>
+                            IBM SkillsBuild
+                        </strong>
+
+                    </p>
+
+
+                    <p>
+
+                        Issued:
+                        September 25, 2026
+
+                    </p>
+
+
+                    <!-- =================================================
+                         ✏️ CHANGE HERE:
+                         Certificate PDF filename
+                    ================================================== -->
+
+                    <br>
+
+                    <a href="certificate-career-management.pdf"
+                       target="_blank"
+                       class="btn">
+
+                        View Certificate
+
+                    </a>
+
+
+                    <!-- [DB: certificates[1]] -->
+
+
+                </div>
+
+            </div>
+            <br><br>
+
+
+
+            <!-- =================================================
+                 CERTIFICATE 3 - MYANATOMY
+            ================================================== -->
+
+            <div class="certificate">
+
+
+                <div class="certificate-icon">
+                    🏆
+                </div>
+
+
+                <div>
+
+
+                    <!-- ✏️ CHANGE HERE IF REQUIRED -->
+
+                    <h3>
+                        3-Days Employability
+                        Enhancement Workshop
+                    </h3>
+
+
+                    <p>
+
+                        Issued by:
+                        <strong>
+                            MyAnatomy
+                        </strong>
+
+                    </p>
+
+
+                    <p>
+
+                        Topics:
+
+                        Full Stack Development,
+                        Gemini AI,
+                        Cybersecurity,
+                        Code Optimization,
+                        Tech Interviews
+
+                    </p>
+
+
+                    <!-- =================================================
+                         ✏️ CHANGE HERE:
+                         Put your MyAnatomy certificate file
+                         in the same folder and change filename.
+                    ================================================== -->
+
+                    <br>
+
+                    <a href="myanatomy-certificate.pdf"
+                       target="_blank"
+                       class="btn">
+
+                        View Certificate
+
+                    </a>
+
+
+                    <!-- [DB: certificates[2]] -->
+
+
+                </div>
+
+            </div>
+            <br><br>
+
+
+<!-- =====================================================
+     HOBBIES
+===================================================== -->
+
+<section id="hobbies">
+
+    <div class="container">
+
+
+        <h2 class="section-title">
+
+            My
+            <span>Hobbies</span>
+
+        </h2>
+
+
+        <div class="hobbies">
+
+
+            <!-- =================================================
+                 ✏️ CHANGE HERE: HOBBY 1
+            ================================================== -->
+
+            <div class="hobby">
+
+                <div class="hobby-icon">
+                    💻
+                </div>
+
+                <p>
+                    Coding
+                </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 ✏️ CHANGE HERE: HOBBY 2
+            ================================================== -->
+
+            <div class="hobby">
+
+                <div class="hobby-icon">
+                    📚
+                </div>
+
+                <p>
+                    Learning
+                </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 ✏️ CHANGE HERE: HOBBY 3
+            ================================================== -->
+
+            <div class="hobby">
+
+                <div class="hobby-icon">
+                    🎮
+                </div>
+
+                <p>
+                    Gaming
+                </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 ✏️ CHANGE HERE: HOBBY 4
+            ================================================== -->
+
+            <div class="hobby">
+
+                <div class="hobby-icon">
+                    🎵
+                </div>
+
+                <p>
+                    Music
+                </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 ✏️ CHANGE HERE: HOBBY 5
+            ================================================== -->
+
+            <div class="hobby">
+
+                <div class="hobby-icon">
+                    📷
+                </div>
+
+                <p>
+                    Photography
+                </p>
+
+            </div>
+
+
+
+
+
+            <!-- =================================================
+                 ✏️ CHANGE HERE: HOBBY 6
+            ================================================== -->
+
+            <div class="hobby">
+
+                <div class="hobby-icon">
+                    ✈️
+                </div>
+
+                <p>
+                    Traveling
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- [DB: hobbies[]] -->
+
+
+    </div>
+
+</section>
+<br><br>
+
+
+
+<!-- =====================================================
+     DATABASE INFORMATION
+===================================================== -->
+
+<section id="database">
+
+    <div class="container">
+
+
+        <h2 class="section-title">
+
+            Portfolio
+            <span>Database</span>
+
+        </h2>
+
+
+        <br><br>
+
+
+        <div class="about-grid">
+
+
+            <div class="card">
+
+
+                <h3>
+                    [DB] Database Fields
+                </h3>
+
+
+                <p>
+
+                    <span class="db">
+                        [DB: profile.name]
+                    </span>
+
+                    → Vikash Kumar
+
+                </p>
+
+
+                <p>
+
+                    <span class="db">
+                        [DB: profile.email]
+                    </span>
+
+                    → vikashkumar9113324021@gmail.com
+
+                </p>
+
+
+                <p>
+
+                    <span class="db">
+                        [DB: profile.mobile]
+                    </span>
+
+                    → 9113324021
+
+                </p>
+
+
+                <p>
+
+                    <span class="db">
+                        [DB: profile.linkedin]
+                    </span>
+
+                    www.linkedin.com/in/vikash-kumar-30bb4b437
+
+                </p>
+
+
+                <p>
+
+                    <span class="db">
+                        [DB: profile.github]
+                    </span>
+
+                    vikashkumar9113324021-ux
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="card">
+
+
+                <h3>
+                    ✏️ Information Still Required
+                </h3>
+
+
+                <p>
+                    <span class="placeholder">
+                        [ University Name]
+                    </span>
+                    Mewar University
+                </p>
+
+
+                <p>
+                    <span class="placeholder">
+                        [12th Collage Name]
+                    </span>
+                     Sri Nawab S.S. School Sheohar
+                </p>
+
+
+                <p>
+                    <span class="placeholder">
+                        [Marks/Percent]
+                    </span>
+                    325 / 65% 
+                </p>
+
+
+                <p>
+                    <span class="placeholder">
+                        [10th School Name]
+                    </span>
+                     Uttkramit M S Khairbadurp, Sheohar
+                </p>
+
+
+                <p>
+                    <span class="placeholder">
+                        [Marks/Percent]
+                    </span>
+                    349 / 69.99%
+                </p>
+
+
+                <p>
+                    <span class="placeholder">
+                        [PLACEHOLDER]
+                    </span>
+                    Sheohar / Bihar
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+<br><br>
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section id="contact">
+
+    <div class="container">
+
+
+        <h2 class="section-title">
+
+            Contact
+            <span>Me</span>
+
+        </h2>
+
+
+        <div class="contact-grid">
+
+
+            <!-- CONTACT INFORMATION -->
+
+            <div class="card">
+
+
+                <div class="contact-item">
+
+
+                    <div class="contact-icon">
+                        📧
+                    </div>
+
+
+                    <div>
+
+                        <h4>
+                            Email
+                        </h4>
+
+
+                        <!-- =================================================
+                             ✏️ CHANGE HERE: EMAIL
+                        ================================================== -->
+
+                        <p>
+
+                            <a href="mailto:vikashkumar9113324021@gmail.com">
+
+                                vikashkumar9113324021@gmail.com
+
+                            </a>
+
+                        </p>
+
+
+                        <!-- [DB: profile.email] -->
+
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="contact-item">
+
+
+                    <div class="contact-icon">
+                        📱
+                    </div>
+
+
+                    <div>
+
+                        <h4>
+                            Mobile
+                        </h4>
+
+
+                        <!-- =================================================
+                             ✏️ CHANGE HERE: MOBILE NUMBER
+                        ================================================== -->
+
+                        <p>
+
+                            <a href="tel:+919113324021">
+
+                                9113324021
+
+                            </a>
+
+                        </p>
+
+
+                        <!-- [DB: profile.mobile] -->
+
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="contact-item">
+
+
+                    <div class="contact-icon">
+                        💼
+                    </div>
+
+
+                    <div>
+
+                        <h4>
+                            LinkedIn
+                        </h4>
+
+
+                        <!-- =================================================
+                             ✏️ CHANGE HERE: LINKEDIN URL
+                        ================================================== -->
+
+                        <p>
+
+                            <a
+                            href="https://www.linkedin.com/in/vikash-kumar-30bb4b437"
+                            target="_blank">
+
+                                linkedin.com/in/vikash-kumar-30bb4b437
+
+                            </a>
+
+                        </p>
+
+
+                        <!-- [DB: profile.linkedin] -->
+
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="contact-item">
+
+
+                    <div class="contact-icon">
+                        💻
+                    </div>
+
+
+                    <div>
+
+                        <h4>
+                            GitHub
+                        </h4>
+
+
+                        <!-- =================================================
+                             ✏️ CHANGE HERE: GITHUB URL
+                        ================================================== -->
+
+                        <p>
+
+                            <a
+                            href="https://github.com/vikashkumar9113324021-ux"
+                            target="_blank">
+
+                                github.com/vikashkumar9113324021-ux
+
+                            </a>
+
+                        </p>
+
+
+                        <!-- [DB: profile.github] -->
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+<br><br>
+
+            <!-- =================================================
+                 CONTACT FORM
+            ================================================== -->
+
+            <form id="contactForm">
+
+
+                <!-- [DB: contact_messages] -->
+
+
+                <div class="input-group">
+
+                    <label>
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                        required>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        Your Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        Your Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        placeholder="Write your message..."
+                        required></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary">
+
+                    Send Message
+
+                </button>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+</section>
+<br><br>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <p>
+
+        © 2026
+        <strong>Vikash Kumar</strong>.
+        All Rights Reserved.
+
+    </p>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+    /* =====================================================
+       MOBILE MENU
+    ===================================================== */
+
+    function toggleMenu() {
+
+        document
+            .getElementById("navLinks")
+            .classList
+            .toggle("active");
+
+    }
+
+
+    /* Close mobile menu after clicking */
+
+    document
+        .querySelectorAll(".nav-links a")
+        .forEach(function(link) {
+
+            link.addEventListener(
+                "click",
+                function() {
+
+                    document
+                        .getElementById("navLinks")
+                        .classList
+                        .remove("active");
+
+                }
+            );
+
+        });
+        <br></br>
+
+
+
+    /* =====================================================
+       CONTACT FORM
+    ===================================================== */
+
+    document
+        .getElementById("contactForm")
+        .addEventListener(
+            "submit",
+            function(event) {
+
+                event.preventDefault();
+
+
+                const name =
+                    document
+                    .getElementById("name")
+                    .value;
+
+
+                const email =
+                    document
+                    .getElementById("email")
+                    .value;
+
+
+                const message =
+                    document
+                    .getElementById("message")
+                    .value;
+
+
+                /*
+                   =================================================
+                   [DB]
+
+                   Later, connect this form to your
+                   Node.js + Express + MongoDB backend.
+
+                   Example:
+
+                   fetch("/api/contact", {
+                       method: "POST",
+
+                       headers: {
+                           "Content-Type":
+                           "application/json"
+                       },
+
+                       body: JSON.stringify({
+                           name: name,
+                           email: email,
+                           message: message
+                       })
+                   });
+                   <br><br>
+
+                   MongoDB collection:
+
+                   contact_messages
+                   =================================================
+                */
+
+
+                const subject =
+                    encodeURIComponent(
+                        "Portfolio Contact - " + name
+                    );
+
+
+                const body =
+                    encodeURIComponent(
+
+                        "Name: " + name +
+                        "\nEmail: " + email +
+                        "\n\nMessage:\n" + message
+
+                    );
+
+
+                window.location.href =
+                    "mailto:vikashkumar9113324021@gmail.com"
+                    + "?subject="
+                    + subject
+                    + "&body="
+                    + body;
+
+            }
+        );
+
+
+</script>
+
+
+</body>
+
+</html>
